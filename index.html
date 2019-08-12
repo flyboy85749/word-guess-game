@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Javascript Hangman Game</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h1>Let's Play!</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<h2>The Rules</h2>
+				<p>You will guess a letter each turn. Correct guesses will be
+					filled in the diagram, in the position for that letter. In the case where
+					there are more than one of that letter, only one will be placed at a time.
+					It is up to you to decide whatever.</p>
+				<p>So, let's get started.</p>
+				<script>
+					// start by creating a word to guess
+					let words = ["dermatoglyphics", "publisher", "random", "amusing", "ovulate", "posit", "matrix", "purge", "gradient"];
+
+					// randomly pick a word
+					var word = words[Math.floor(Math.random() * words.length)];
+					console.log(word);
+
+					// split the word into individual letters
+					let arr = word.split("");
+
+					// print the letters as a check that we're good so far
+					console.log(arr);
+
+					// store player's name in name
+					let name = prompt("What is your name?");
+
+					// Welcome them to the game
+					alert("Hello " + name + ". Good Luck!");
+
+					// let player know how many letters there are
+					alert("This word has " + arr.length + " letters, with none repeating!");
+
+					// create an array to store guesses
+					let answerArray = [];
+					for (var i = 0; i < word.length; i++) {
+						answerArray[i] = "_";
+
+					}
+
+					// show spaces for word
+					alert(answerArray.join(" "));
+
+					// set letters remaining to current word length
+					var lettersRemaining = word.length;
+					console.log(answerArray);
+					console.log(lettersRemaining);
+
+
+					// prompt for their guess
+					var guess = prompt("Guess a letter, or click Cancel to stop playing.");
+					if (guess === null) {
+
+						prompt("Do you want to quit?");
+
+					}
+					else if (guess.length !== 1) {
+
+						alert("Please enter a single letter.");
+					}
+
+					else {
+						for (var j = 0; j < word.length; j++) {
+							if (word[j] === guess) {
+								answerArray[j] = guess;
+								lettersRemaining--;
+							}
+						}
+					};
+
+				
+					// a while loop to keep track of letters left
+					while (lettersRemaining > 0) {
+						//do something
+					}
+
+					// alert(answerArray.join(" "));
+					// alert("Good job! The answer was " + word);
+
+				</script>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col" id="word">
+			</div>
+
+			<div class="col" id="spaces"></div>
+
+			<script>
+				// tell player how many spaces are in  the word
+				var element = document.getElementById("word");
+				element.innerHTML = "This word has " + arr.length + " letters, with none repeating!";
+
+				// // create the spaces
+				var spaces = document.getElementById("spaces");
+				spaces.innerHTML = answerArray;
+
+			</script>
+
+		</div>
+		<div class="row">
+			<div class="col">
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
