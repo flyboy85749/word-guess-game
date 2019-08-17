@@ -2,6 +2,18 @@
     border: box-model;
 }
 
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1em;
+    background-image: image("/puppy.jpg");
+    }
+
+.jumbotron {
+    background:none;
+    
+}
+
+
 #spaces {
     font-size: 48px;
     line-height: 2em;
@@ -15,7 +27,7 @@
 
 
 h4 {
-    background-image: "url('assets/images/blank_tile.jpg')";
+    background-image: image('assets/images/blank_tile.jpg');
 }
 
 

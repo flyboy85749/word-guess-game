@@ -22,6 +22,10 @@ var wins = 0;
 var losses = 0;
 var remainingGuesses = 0;
 
+// sounds
+// var winAudio = new Audio('http://soundbible.com/72-Dog-Howling-At-Moon.html');
+// audio.play();
+
 // ****************************************************
 
 // ************************ FUNCTIONS ********************
@@ -29,6 +33,8 @@ function startGame() {
     chosenWord = words[Math.floor(Math.random() * words.length)];
     wordLetters = chosenWord.split("");
     numBlanks = wordLetters.length;
+    var audio = new Audio ('https://ia802304.us.archive.org/14/items/Who_Let_The_Dogs_Out/WhoLetTheDogsOut_512kb.mp4');
+    audio.play();
 
     // reset
     remainingGuesses = 10;
@@ -107,8 +113,10 @@ function roundComplete() {
 
     if (wordLetters.toString() == blanksAndSuccesses.toString()) {
         wins++;
+        
         alert("You won!");
-
+        
+        
         // update the wins in html
         document.getElementById("wins").innerHTML = "Wins: " + wins;
         startGame();
