@@ -6,4 +6,16 @@
     font-size: 48px;
     line-height: 2em;
     text-align: center;
+    
 }
+
+.wins, .losses, .remaining {
+    text-align: center; 
+}
+
+
+h4 {
+    background-image: "url('assets/images/blank_tile.jpg')";
+}
+
+

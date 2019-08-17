@@ -43,7 +43,7 @@ function startGame() {
     // go ahead and change HTML
 
     // put spaces for random word in spaces div
-    document.getElementById("spaces").innerHTML = blanksAndSuccesses.join(" ");
+	document.getElementById("spaces").innerHTML = blanksAndSuccesses.join(" ");
 
     // Remaining guesses
     document.getElementById("remaining").innerHTML = "Remaining Guesses: " + remainingGuesses;
@@ -58,10 +58,10 @@ function startGame() {
     document.getElementById("wrong").innerHTML = "Wrong Guesses: " + wrongLetters;
 
     // check it's working
-    console.log(chosenWord);
-    console.log(wordLetters);
-    console.log(numBlanks);
-    console.log(blanksAndSuccesses);
+    // console.log(chosenWord);
+    // console.log(wordLetters);
+    // console.log(numBlanks);
+    // console.log(blanksAndSuccesses);
 }
 
 function checkLetters(letter) {
@@ -93,11 +93,11 @@ function checkLetters(letter) {
     }
 
     // make sure it works
-    console.log(blanksAndSuccesses);
+    // console.log(blanksAndSuccesses);
 }
 
 function roundComplete() {
-    console.log("Win Count: " + wins + " | Loss Count: " + losses + " | Guesses Left: " + remainingGuesses);
+    // console.log("Win Count: " + wins + " | Loss Count: " + losses + " | Guesses Left: " + remainingGuesses);
 
     // update the html to reflect most recent count
     document.getElementById("remaining").innerHTML = "Guesses remaining: " + remainingGuesses;
@@ -150,7 +150,7 @@ document.onkeyup = function (event) {
     checkLetters(letterGuessed);
     roundComplete();
     // make sure it works
-    console.log(letterGuessed);
+    // console.log(letterGuessed);
 }
 
 
