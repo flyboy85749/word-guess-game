@@ -5,12 +5,47 @@
 body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1em;
-    background-image: image("/puppy.jpg");
+    background: url("../images/puppy.jpg"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    color:rgb(18, 135, 245);
+    background-color: aliceblue;
+    margin: 0 auto;
     }
 
-.jumbotron {
-    background:none;
+
+.display-3 {
+    font-size: 48px;
+    color:black;
+}
+
+.lead {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.jumbotron, .container {
+   background: transparent;
+
+}
+
+.card-body {
+    background: transparent;
+}
+
+.caveat {
+    color: rgb(243, 9, 48);
     
+}
+
+.start {
+    color: #fff;
+    background-color: orange;
+    text-align: center;
+}
+
+.guesses {
+    margin-top: 20px;
 }
 
 
@@ -18,16 +53,11 @@ body {
     font-size: 48px;
     line-height: 2em;
     text-align: center;
-    
-}
+    }
 
 .wins, .losses, .remaining {
     text-align: center; 
 }
 
-
-h4 {
-    background-image: image('assets/images/blank_tile.jpg');
-}
 
 

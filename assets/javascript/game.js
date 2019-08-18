@@ -1,6 +1,14 @@
 // ****************GLOBAL VARIABLES **************************
 // list of words to guess
-var words = ["dermatoglyphics", "publisher", "random", "amusing", "ovulate", "posit", "matrix", "purge", "gradient"];
+var words = ["goldenretriever", "beagle", "saintbernard", "yorkie", "alaskanmalamute", "siberianhusky",
+"bassetthound", "staffordshireterrier", "lapdog", "dirtydog", "baddog", "airedale" , "chihuahua",
+"borzoi", "whippet", "greyhound", "foxhound", "poodle", "afghan", "terrier",
+"corgi", "boxer", "daschund", "weimeraner", "bloodhound", "irishsetter"];
+
+// array of hints
+var hints = ["has four legs", "is dander free", "is also known as a pit bull", "has a great nose",
+"works at the airport", "is a fighter", "is low and slow", "is also a blanket", "loves to fetch", "says I'm givin 'er all I've got, Jim!",
+"loves bagpipes"];
 
 // need an empty array to hold selected word
 var chosenWord = "";
@@ -22,19 +30,23 @@ var wins = 0;
 var losses = 0;
 var remainingGuesses = 0;
 
-// sounds
-// var winAudio = new Audio('http://soundbible.com/72-Dog-Howling-At-Moon.html');
-// audio.play();
+// stop the music button, not real
+$(".btn").on("click", function(){
+    alert("Can't Stop This! Oh, that was MC Hammer :)");
+  });
+
 
 // ****************************************************
 
 // ************************ FUNCTIONS ********************
 function startGame() {
     chosenWord = words[Math.floor(Math.random() * words.length)];
+    randomHint = hints[Math.floor(Math.random() * hints.length)];
     wordLetters = chosenWord.split("");
     numBlanks = wordLetters.length;
-    var audio = new Audio ('https://ia802304.us.archive.org/14/items/Who_Let_The_Dogs_Out/WhoLetTheDogsOut_512kb.mp4');
+    var audio = new Audio('https://ia802304.us.archive.org/14/items/Who_Let_The_Dogs_Out/WhoLetTheDogsOut_512kb.mp4');
     audio.play();
+
 
     // reset
     remainingGuesses = 10;
@@ -46,10 +58,13 @@ function startGame() {
         blanksAndSuccesses.push("_");
     }
 
+
+
     // go ahead and change HTML
 
+
     // put spaces for random word in spaces div
-	document.getElementById("spaces").innerHTML = blanksAndSuccesses.join(" ");
+    document.getElementById("spaces").innerHTML = blanksAndSuccesses.join(" ");
 
     // Remaining guesses
     document.getElementById("remaining").innerHTML = "Remaining Guesses: " + remainingGuesses;
@@ -63,12 +78,17 @@ function startGame() {
     // display wrong guesses 
     document.getElementById("wrong").innerHTML = "Wrong Guesses: " + wrongLetters;
 
+    // provide a random hint
+    document.getElementById("hint").innerHTML = "This Breed:  " + randomHint;
+
     // check it's working
     // console.log(chosenWord);
     // console.log(wordLetters);
     // console.log(numBlanks);
     // console.log(blanksAndSuccesses);
 }
+
+
 
 function checkLetters(letter) {
     var isLetterInWord = false;
@@ -113,10 +133,10 @@ function roundComplete() {
 
     if (wordLetters.toString() == blanksAndSuccesses.toString()) {
         wins++;
-        
-        alert("You won!");
-        
-        
+
+        alert("You won! The dog was " + chosenWord + "!");
+
+
         // update the wins in html
         document.getElementById("wins").innerHTML = "Wins: " + wins;
         startGame();
@@ -126,7 +146,7 @@ function roundComplete() {
     // check if user lost
     else if (remainingGuesses == 0) {
         losses++;
-        alert("You lost!");
+        alert("You lost! The dog was " + chosenWord + "!");
 
         // update the html
         document.getElementById("losses").innerHTML = "Losses: " + losses;
@@ -134,15 +154,6 @@ function roundComplete() {
     }
 
 }
-
-
-
-
-
-
-
-
-
 
 
 

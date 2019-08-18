@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
 </head>
 
 <body>
@@ -18,30 +19,37 @@
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-9">
                         <h1 class="display-3">Bill's Doggone Good Word Guess</h1>
                         <p class="lead">Ready to Play?</p>
+                    </div>
+                    <div class="col-3">
+                        <a class="btn btn-primary btn-lg music" href="#" role="button">Stop the "Music"!</a>
                     </div>
                 </div>
                 <hr class="my-2">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-4 lead">
                         <h3>The Rules</h3>
-                        <p>You will start out with 10 guesses. Enter letters one at a time, by
-                            typing your guess. Each correct guess will automatically show up in
-                            blank spaces. Incorrect letters will appear in the wrong guesses
+                        <p>You will start out with 10 guesses. Each correct guess will automatically show up in
+                            the blank spaces. Incorrect letters will appear in the wrong guesses
                             section. If, at the end of a round, you have all the blanks filled, you
                             win. If not, then you lose.
                         </p>
-                        <p class="lead">
-                            <a class="btn btn-primary btn-lg" href="#" role="button">Press any letter key to start!</a>
-                        </p>
+
                     </div>
                     <div class="col-8">
+                        <p class="lead">
+                            <h3 class="start">Press any key to start!</h3>
+                        </p>
+                        <p class="caveat">Keep in mind that the hints are also random, so will not match the breed,
+                            unless you get really lucky.</p>
+
                         <div class="card border-primary">
                             <img class="card-img-top" src="holder.js/100px180/" alt="">
                             <div class="card-body">
-                                <h4 class="word-guess">Word to Guess:</h4>
+
+                                <h4 class="word-guess" id="hint">The Dog Breed Is:</h4>
                                 <p class="card-text"></p>
                                 <div class="card border-secondary">
                                     <img class="card-img-top" src="holder.js/100px180/" alt="">
@@ -62,7 +70,7 @@
                 <p class="card-text"></p>
             </div> -->
                 <!-- </div> -->
-                <div class="row">
+                <div class="row guesses">
                     <div class="col-4 wrong">
                         <div class="card border-primary">
                             <img class="card-img-top" src="holder.js/100px180/" alt="">
