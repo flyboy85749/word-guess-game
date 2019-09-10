@@ -5,11 +5,11 @@
 body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1em;
-    background: url("../images/puppy.jpg"); 
+     background: url("../images/puppy.jpg");
     background-repeat: no-repeat;
     background-position: center;
     color:rgb(18, 135, 245);
-    background-color: aliceblue;
+    
     margin: 0 auto;
     }
 
@@ -29,8 +29,8 @@ body {
 
 }
 
-.card-body {
-    background: transparent;
+.card-body, .card-text {
+    background: none;
 }
 
 .caveat {

@@ -134,7 +134,7 @@ function roundComplete() {
     if (wordLetters.toString() == blanksAndSuccesses.toString()) {
         wins++;
 
-        alert("You won! The dog was " + chosenWord + "!");
+        alert("You won! The answer was " + chosenWord + "!");
 
 
         // update the wins in html
@@ -146,7 +146,7 @@ function roundComplete() {
     // check if user lost
     else if (remainingGuesses == 0) {
         losses++;
-        alert("You lost! The dog was " + chosenWord + "!");
+        alert("You lost! The answer was " + chosenWord + "!");
 
         // update the html
         document.getElementById("losses").innerHTML = "Losses: " + losses;
