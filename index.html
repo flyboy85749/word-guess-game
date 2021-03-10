@@ -1,127 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Word Guess Game</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Guess</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;400;700&display=swap" rel="stylesheet" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css"
+    /> -->
+    <link rel="stylesheet" href="/app/scss/style.css" />
 </head>
 
 <body>
-    <div id="container">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <div class="row">
-                    <div class="col-9">
-                        <h1 class="display-3">Bill's Doggone Good Word Guess</h1>
-                        <p class="lead">Ready to Play?</p>
-                    </div>
-                    <div class="col-3">
-                        <a class="btn btn-primary btn-lg music" href="#" role="button">Stop the "Music"!</a>
-                    </div>
-                </div>
-                <hr class="my-2">
-                <div class="row">
-                    <div class="col-4 lead">
-                        <h3>The Rules</h3>
-                        <p>You will start out with 10 guesses. Each correct guess will automatically show up in
-                            the blank spaces. Incorrect letters will appear in the wrong guesses
-                            section. If, at the end of a round, you have all the blanks filled, you
-                            win. If not, then you lose.
-                        </p>
+    <header class="header">
+        <nav class="flex flex-jc-sb flex-ai-c">
+            <a href="/" class="header__logo">
+                <img src="/images/pawprint.png" height="50" width="50" alt="dog pawprint" />
+            </a>
+            <h1>
+                Guess the Breed Game
+            </h1>
+            <a href="#" class="header__menu hide-for-desktop">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
 
-                    </div>
-                    <div class="col-8">
-                        <p class="lead">
-                            <h3 class="start">Press any key to start!</h3>
-                        </p>
-                        <p class="caveat">Keep in mind that the hints are also random, so will not match the breed,
-                            unless you get really lucky.</p>
-
-                        <div class="card border-primary">
-                            <!-- <img class="card-img-top" src="holder.js/100px180/" alt=""> -->
-                            <div class="card-body">
-
-                                <h4 class="word-guess" id="hint">The Dog Breed Is:</h4>
-                                <p class="card-text"></p>
-                                <div class="card border-secondary">
-                                    <!-- <img class="card-img-top" src="holder.js/100px180/" alt=""> -->
-                                    <div class="card-body">
-                                        <h4 id="spaces"></h4>
-                                        <p class="card-text"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div class="card border-primary">
-            <img class="card-img-top" src="holder.js/100px180/" alt="">
-            <div class="card-body">
-                <h4 id="spaces"></h4>
-                <p class="card-text"></p>
-            </div> -->
-                <!-- </div> -->
-                <div class="row guesses">
-                    <div class="col-4 wrong">
-                        <div class="card border-primary">
-                            <!-- <img class="card-img-top" src="holder.js/100px180/" alt=""> -->
-                            <div class="card-body">
-                                <h4 id="wrong"></h4>
-                                <p class="card-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 remaining">
-                        <div class="card border-primary">
-                            <!-- <img class="card-img-top" src="holder.js/100px180/" alt=""> -->
-                            <div class="card-body">
-                                <h4 id="remaining"></h4>
-                                <p class="card-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-2 wins">
-                        <div class="card border-primary">
-                            <!-- <img class="card-img-top" src="holder.js/100px180/" alt=""> -->
-                            <div class="card-body">
-                                <h4 id="wins"></h4>
-                                <p class="card-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-2 losses">
-                        <div class="card border-primary">
-                            <!-- <img class="card-img-top" src="holder.js/100px180/" alt=""> -->
-                            <div class="card-body">
-                                <h4 id="losses"></h4>
-                                <p class="card-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="header__links hide-for-mobile">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Support</a>
+                <a href="#">Bark</a>
             </div>
 
-            <!-- Optional JavaScript -->
-            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                crossorigin="anonymous"></script>
-            <script src="assets/javascript/game.js"></script>
+            <a href="#" class="button header__cta">Play Now</a>
+        </nav>
+    </header>
+    <main class="main">
+        <p>
+            The object of the game is to guess what breed the dog is, based on the clue provided.
+        </p>
+        <p>
+            To get started, press the "Play Now" button in the upper right.
+        </p>
+    </main>
+    <script src="/app/js/script.js"></script>
 </body>
 
 </html>
