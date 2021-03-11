@@ -88,3 +88,13 @@
     }
   }
 }
+
+.overlay {
+  position: fixed;
+  top: 90px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: $lightBlue;
+  background-image: linear-gradient($lightBlue, transparent);
+}

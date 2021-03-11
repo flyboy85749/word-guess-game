@@ -164,6 +164,17 @@ button, .button {
   opacity: 0.75;
 }
 
+.overlay {
+  position: fixed;
+  top: 90px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #11CEF0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#11CEF0), to(transparent));
+  background-image: linear-gradient(#11CEF0, transparent);
+}
+
 p {
   color: #FFF;
 }
