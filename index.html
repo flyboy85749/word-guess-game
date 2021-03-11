@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- https://youtu.be/aoQ6S1a32j8?t=2622 -->
 
 <head>
     <meta charset="UTF-8" />
@@ -7,11 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Word Guess</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;400;700&display=swap" rel="stylesheet" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css"
-    /> -->
+
     <link rel="stylesheet" href="/app/scss/style.css" />
 </head>
 
@@ -19,12 +19,10 @@
     <header class="header">
         <nav class="flex flex-jc-sb flex-ai-c">
             <a href="/" class="header__logo">
-                <img src="/images/pawprint.png" height="50" width="50" alt="dog pawprint" />
+                <img src="/images/pawprint.png" alt="dog pawprint" />
             </a>
-            <h1>
-                Guess the Breed Game
-            </h1>
-            <a href="#" class="header__menu hide-for-desktop">
+            <h1>Guess the Breed Game</h1>
+            <a id="btnHamburger" href="#" class="header__menu hide-for-desktop">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -38,17 +36,42 @@
                 <a href="#">Bark</a>
             </div>
 
-            <a href="#" class="button header__cta">Play Now</a>
+            <a href="#" class="button header__cta btn">Play Now</a>
         </nav>
     </header>
     <main class="main">
         <p>
-            The object of the game is to guess what breed the dog is, based on the clue provided.
+            The object of the game is to guess what breed the dog is, based on the
+            clue provided.
         </p>
-        <p>
-            To get started, press the "Play Now" button in the upper right.
-        </p>
+        <p>To get started, press the "Play Now" button in the upper right.</p>
+
+        <div class="flex flex-jc-sb flex-ai-c">
+            <div class="col-3">
+                <div id="spaces"></div>
+                <div id="hint"></div>
+            </div>
+        </div>
+        <div class="flex flex-jc-sb flex-ai-c">
+            <div class="col-3">
+                <div id="remaining"></div>
+            </div>
+        </div>
+
+        <div id="wins"></div>
+        <div id="losses"></div>
+        <div id="wrong"></div>
     </main>
+    <footer class="footer">
+        <p class="credit">
+            Background image by
+            <a
+                href="https://unsplash.com/@hannah15198?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Hannah
+                Lim</a>
+            on
+            <a href="/s/photos/dogs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
+    </footer>
     <script src="/app/js/script.js"></script>
 </body>
 
