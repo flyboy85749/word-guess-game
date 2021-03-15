@@ -12,18 +12,21 @@
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;400;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="/app/scss/style.css" />
+    <link rel="stylesheet" href="/app/dist/style.css" />
 </head>
 
 <body>
     <header class="header">
-        <div class="overlay"></div>
+        <!-- <div class="overlay">
+            <div id="spaces"></div>
+            <div id="hint"></div> 
+        </div> -->
         <nav class="flex flex-jc-sb flex-ai-c">
             <a href="/" class="header__logo">
                 <img src="/images/pawprint.png" alt="dog pawprint" />
             </a>
             <h1>Guess the Breed Game</h1>
-            <a id="btnHamburger" href="#" class="header__menu hide-for-desktop">
+            <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -39,6 +42,13 @@
 
             <a href="#" class="button header__cta btn">Play Now</a>
         </nav>
+        <div class="header__menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Blog</a>
+            <a href="#">Bark</a>
+        </div>
     </header>
     <main class="main">
         <p>
@@ -47,7 +57,7 @@
         </p>
         <p>To get started, press the "Play Now" button in the upper right.</p>
 
-        <div class="flex flex-jc-sb flex-ai-c">
+        <!-- <div class="flex flex-jc-sb flex-ai-c">
             <div class="col-3">
                 <div id="spaces"></div>
                 <div id="hint"></div>
@@ -57,7 +67,7 @@
             <div class="col-3">
                 <div id="remaining"></div>
             </div>
-        </div>
+        </div> -->
 
         <div id="wins"></div>
         <div id="losses"></div>
