@@ -1,35 +1,4 @@
 .header {
-
-  // hamburger open styles
-  &.open {
-
-    &__toggle {
-      > span:first-child {
-         transform: rotate(45deg);
-      }
-    
-      > span:nth-child(2) {
-        opacity: 0;
-        }
-    
-        > span:last-child {
-          transform: rotate(-45deg);
-        }
-      }
-    }
-      
-    
-
-  .overlay {
-    position: fixed;
-    top: 5.625rem;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: $lightBlue;
-    background-image: linear-gradient($lightBlue, transparent);
-  }
-
   nav {
     padding: 1.0625rem 1.5rem;
   }
@@ -45,57 +14,6 @@
     }
   }
 
-  &__menu {
-    // Mobile Menu toggle
-    > span {
-      display: block;
-      width: 26px;
-      height: 2px;
-      background-color: $darkerBlue;
-      transition: all 300ms ease-in-out;
-      transform-origin: 3px 1px;
-
-      &:not(:last-child) {
-        margin-bottom: 5px;
-      }
-    }
-
-  }
-
-  &__links {
-    a {
-      position: relative;
-      font-size: $font-lg;
-      color: $white;
-      transition: color 300ms ease-in-out;
-
-      &:not(:last-child) {
-        margin-right: 32px;
-      }
-
-      &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        height: 5px;
-        left: 0;
-        right: 0;
-        bottom: -30px;
-        background: linear-gradient(to right, $darkerBlue, $lightBlue);
-        opacity: 0;
-        transition: opacity 300ms ease-in-out;
-      }
-
-      &:hover {
-        color: $lemonYellow;
-
-        &::before {
-          opacity: 1;
-        }
-      }
-    }
-  }
-
   &__cta {
     font-size: $font-sm;
     color: $white;
@@ -106,7 +24,3 @@
     }
   }
 }
-
-
-
-
