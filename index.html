@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,69 +11,57 @@
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;400;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="./dist/css/style.css" />
+    <link rel="stylesheet" href="/dist/css/style.css" />
 
-</head>
+ </head>
 
 <body>
     <header class="header">
-        <!-- <div class="overlay">
-            <div id="spaces"></div>
-            <div id="hint"></div> 
-        </div> -->
         <nav class="flex flex-jc-sb flex-ai-c">
-            <a href="/" class="header__logo">
+            <a href="/" class="header__logo hide-for-mobile">
                 <img src="./images/pawprint.png" alt="dog pawprint" />
             </a>
+            <button class="button header__cta btn">Play Now</button>
             <h1>Guess the Breed Game</h1>
-            <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
-
-            <div class="header__links hide-for-mobile">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-                <a href="#">Support</a>
-                <a href="#">Bark</a>
-            </div>
-
-            <a href="#" class="button header__cta btn">Play Now</a>
         </nav>
-        <div class="header__menu">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">Blog</a>
-            <a href="#">Bark</a>
-        </div>
     </header>
-    <main class="main">
+    <main class="main flex flex-jc-sb flex-ai-c">
         <p>
             The object of the game is to guess what breed the dog is, based on the
-            clue provided.
+            clue provided. To get started, press the "Play Now" above. Keep in mind that the hints are random as well,
+            so they probably won't help much. Good luck!
         </p>
-        <p>To get started, press the "Play Now" button in the upper right.</p>
-
-        <!-- <div class="flex flex-jc-sb flex-ai-c">
-            <div class="col-3">
-                <div id="spaces"></div>
-                <div id="hint"></div>
-            </div>
-        </div>
-        <div class="flex flex-jc-sb flex-ai-c">
-            <div class="col-3">
-                <div id="remaining"></div>
-            </div>
-        </div> -->
-
-        <div id="wins"></div>
-        <div id="losses"></div>
-        <div id="wrong"></div>
     </main>
-    <footer class="footer">
+    <div class="game">
+        <div id="hint">
+
+        </div>
+        <br>
+        <div id="spaces">
+            <!-- empty spaces go here... -->
+        </div>
+        <br>
+        <div id="remaining">
+            <!-- empty spaces go here... -->
+        </div>
+        <br>
+        <div id="wins">
+
+        </div>
+        <br>
+        <div id="losses">
+
+        </div>
+        <br>
+        <div id="wrong">
+
+        </div>
+    </div>
+
+    <footer class="footer flex flex-jc-sb flex-ai-c">
+        <div class="copy">
+            <p>Copyright &copy; Christian Web Developer 2021</p>
+        </div>
         <p class="credit">
             Background image by
             <a
