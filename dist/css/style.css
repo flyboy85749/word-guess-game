@@ -1,14 +1,14 @@
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
@@ -17,16 +17,16 @@ body {
   font-family: 'Public Sans', sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
-  color: #fff;
+  color: #FFF;
   line-height: 1.3;
-  background-image: url('../../images/dogs_background.jpg');
+  background-image: url("/images/dogs_background.jpg");
 }
 
 a,
 a:visited,
 a:hover {
   text-decoration: none;
-  color: #fff;
+  color: #FFF;
 }
 
 .flex {
@@ -37,36 +37,30 @@ a:hover {
 
 .flex-jc-sb {
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .flex-jc-c {
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .flex-ai-c {
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 button,
 .button {
   padding: 0.875rem 2.1875rem;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#fceb58),
-    to(#f562a3)
-  );
-  background: linear-gradient(to right, #fceb58, #f562a3);
+  background: -webkit-gradient(linear, left top, right top, from(#FCEB58), to(#F562A3));
+  background: linear-gradient(to right, #FCEB58, #F562A3);
   border-radius: 50px;
   cursor: pointer;
-  color: #fff;
+  color: #FFF;
   font-weight: 700;
   border: 0;
 }
@@ -75,13 +69,30 @@ button,
 .footer {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding: 24px;
 }
 
 .game {
   padding: 24px;
+}
+
+.card-body {
+  background: #F562A3;
+}
+
+.card-title {
+  color: #FCEB58;
+  text-align: center;
+}
+
+.col {
+  text-align: center;
+}
+
+#remaining, #wins, #losses {
+  text-align: center;
 }
 
 @media (max-width: 63.9375em) {
@@ -101,7 +112,7 @@ button,
 }
 
 .header h1 {
-  color: #fceb58;
+  color: #FCEB58;
 }
 
 .header__logo img {
@@ -111,7 +122,7 @@ button,
 
 .header__cta {
   font-size: 0.875rem;
-  color: #fff;
+  color: #FFF;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
 }
@@ -150,7 +161,7 @@ button,
 
 .fade-in {
   -webkit-animation: fade-in 300ms ease-in-out forwards;
-  animation: fade-in 300ms ease-in-out forwards;
+          animation: fade-in 300ms ease-in-out forwards;
 }
 
 @-webkit-keyframes fade-out {
@@ -185,10 +196,10 @@ button,
 
 .fade-out {
   -webkit-animation: fade-out 300ms ease-in-out forwards;
-  animation: fade-out 300ms ease-in-out forwards;
+          animation: fade-out 300ms ease-in-out forwards;
 }
 
 p {
-  color: #fff;
+  color: #FFF;
 }
 /*# sourceMappingURL=style.css.map */
