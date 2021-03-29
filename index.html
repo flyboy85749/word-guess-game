@@ -10,6 +10,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;400;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./dist/css/style.css" />
 
@@ -26,41 +28,88 @@
         </nav>
     </header>
     <main class="main flex flex-jc-sb flex-ai-c">
-        <p>
-            The object of the game is to guess what breed the dog is, based on the
-            clue provided. To get started, press the "Play Now" above. Keep in mind that the hints are random as well,
-            so they probably won't help much. Good luck!
-        </p>
+        <div class="row">
+            <div class="col">
+                <p>
+                    The object of the game is to guess what breed the dog is, based on the
+                    clue provided. To get started, press the "Play Now" above. Keep in mind that the hints are random as
+                    well,
+                    so they probably won't help much. Good luck!
+                </p>
+            </div>
+        </div>
     </main>
     <div class="game">
-        <div id="hint">
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col">
 
-        </div>
-        <br>
-        <div id="spaces">
-            <!-- empty spaces go here... -->
-        </div>
-        <br>
-        <div id="remaining">
-            <!-- empty spaces go here... -->
-        </div>
-        <br>
-        <div id="wins">
+                    <div class="card">
 
-        </div>
-        <br>
-        <div id="losses">
+                        <div class="card-body">
+                            <h5 class="card-title">Guess the Breed</h5>
+                            <div id="hint"></div>
+                            <div id="spaces"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
 
-        </div>
-        <br>
-        <div id="wrong">
+                    <div class="card">
 
+                        <div class="card-body">
+                            <h5 class="card-title">Your Guesses</h5>
+                            <div class="row">
+                                <div class="col">Wrong Letters</div>
+                                <div class="col">Guesses Remaining</div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div id="wrong"></div>
+                                </div>
+                                <div class="col">
+                                    <div id="remaining"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Score</h5>
+                            <div class="row">
+                                <div class="col">Wins</div>
+                                <div class="col">Losses</div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div id="wins">wins</div>
+                                </div>
+                                <div class="col">
+                                    <div id="losses">losses</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+
+
+
     </div>
 
     <footer class="footer flex flex-jc-sb flex-ai-c">
         <div class="copy">
-            <p>Copyright &copy; Christian Web Developer 2021</p>
+            <p>Copyright &copy; 2021 <a href="https://christianwebdeveloper.com">Christian Web Developer</a></p>
         </div>
         <p class="credit">
             Background image by

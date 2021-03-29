@@ -65,16 +65,16 @@ function startGame() {
     document.getElementById("spaces").innerHTML = blanksAndSuccesses.join(" ");
 
     // Remaining guesses
-    document.getElementById("remaining").innerHTML = "Remaining Guesses: " + remainingGuesses;
+    document.getElementById("remaining").innerHTML = remainingGuesses;
 
     // display wins counter
-    document.getElementById("wins").innerHTML = "Wins: " + wins;
+    document.getElementById("wins").innerHTML = wins;
 
     // display losses counter
-    document.getElementById("losses").innerHTML = "Losses: " + losses;
+    document.getElementById("losses").innerHTML = losses;
 
     // display wrong guesses 
-    document.getElementById("wrong").innerHTML = "Wrong Guesses: " + wrongLetters;
+    document.getElementById("wrong").innerHTML = wrongLetters;
 
     // provide a random hint
     document.getElementById("hint").innerHTML = "This Breed:  " + randomHint;
@@ -120,9 +120,9 @@ function roundComplete() {
     // console.log("Win Count: " + wins + " | Loss Count: " + losses + " | Guesses Left: " + remainingGuesses);
 
     // update the html to reflect most recent count
-    document.getElementById("remaining").innerHTML = "Guesses remaining: " + remainingGuesses;
+    document.getElementById("remaining").innerHTML = remainingGuesses;
     document.getElementById("spaces").innerHTML = blanksAndSuccesses.join(" ");
-    document.getElementById("wrong").innerHTML = "Wrong letters guessed: " + wrongLetters.join(" ");
+    document.getElementById("wrong").innerHTML = wrongLetters.join(" ");
     // check if user won
 
     if (wordLetters.toString() == blanksAndSuccesses.toString()) {
@@ -132,7 +132,7 @@ function roundComplete() {
 
 
         // update the wins in html
-        document.getElementById("wins").innerHTML = "Wins: " + wins;
+        document.getElementById("wins").innerHTML = wins;
         startGame();
     }
 
@@ -143,7 +143,7 @@ function roundComplete() {
         alert("You lost! The answer was " + chosenWord + "!");
 
         // update the html
-        document.getElementById("losses").innerHTML = "Losses: " + losses;
+        document.getElementById("losses").innerHTML = losses;
         startGame();
     }
 

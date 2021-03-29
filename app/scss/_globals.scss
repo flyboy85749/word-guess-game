@@ -66,6 +66,23 @@ button,
   padding: 24px;
 }
 
+.card-body {
+  background: $lightPink;
+}
+
+.card-title {
+  color: $lemonYellow;
+  text-align: center;
+}
+
+.col {
+  text-align: center;
+}
+
+#remaining, #wins, #losses {
+  text-align: center;
+}
+
 // Visibility
 .hide-for-mobile {
   @include breakpoint-down(medium) {
